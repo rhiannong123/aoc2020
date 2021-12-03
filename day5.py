@@ -40,7 +40,7 @@ for line in lines:
     fb = list(line[:7])
     lr = list(line[-3:])
     if (not set(fb).issubset(FRONTBACK)) or (not set(lr).issubset(LEFTRIGHT)):
-        print('Input not as expected, Letter(s) found that arent F,B')
+        print('Input not as expected, Letter(s) found that arent F,B or L,R')
         continue
 
     row = get_row_or_col(fb, 'row')
@@ -63,7 +63,7 @@ for line in lines:
     fb = list(line[:7])
     lr = list(line[-3:])
     if (not set(fb).issubset(FRONTBACK)) or (not set(lr).issubset(LEFTRIGHT)):
-        print('Input not as expected, Letter(s) found that arent F,B')
+        print('Input not as expected, Letter(s) found that arent F,B or L,R')
         continue
 
     row = get_row_or_col(fb, 'row')
@@ -83,6 +83,5 @@ for iseat in range(1, max_seat):
                     print(f"Found my seat: {iseat}!")
                     seat_found = True
     
-print(f"Answer: {max_seat}")
 
 
