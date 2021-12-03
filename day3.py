@@ -1,14 +1,14 @@
 import advent_of_code as aoc
-
 import pandas as pd
+import numpy as np
 
 
-## PART 1
 num = 3
 lines = aoc.input_readlines(num)
 lines = [line.strip('\n') for line in lines]
 
 
+## PART 1
 
 maxstr = len(lines[0]) 
 num_trees = 0 
@@ -49,7 +49,6 @@ for slope in slopes:
         else:
             cursor += 1
         
-        ## Slope of right 3, down 1
         check = cursor * slope['right']
 
         ## subtract whole iterations off to circle back
